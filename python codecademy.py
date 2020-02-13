@@ -2,6 +2,7 @@
 #testing out the print statements.
 
 # PRINT STATEMENTS
+
 print ("Hello World!")
 print ("My Name is Miles Lacek")
 print ("I am 30 years old and I love to bike")
@@ -59,15 +60,16 @@ print (round(annual_rainfall))
 
 # COMMENTS 
 city_name = ("St. Potatosburg")
-#this is the St. Potatosburg city population below.
+# this is the St. Potatosburg city population below.
 city_pop = 340000
 
 print ("The City of " + (city_name), "has a population of : ", + (city_pop))
-#comments of the code can be added and used for description of the code to benefit the next programmer who may interact with the code.
+# comments of the code can be added and used for description of the code to benefit the next
+# programmer who may interact with the code.
 
 # NUMBERS 
 
-#integers are numbers, whole numbers and numbers can be given to variables as values. 
+# integers are numbers, whole numbers and numbers can be given to variables as values. 
 
 int1 = 1
 print (int1)
@@ -76,7 +78,7 @@ print (int2)
 int3 = 3
 print (int3)
 
-#float refers to numbers which have decimal points and or remainders. floats can also be placed as values to variables.
+# float refers to numbers which have decimal points and or remainders. floats can also be placed as values to variables.
 float1 = 1.1
 print (float1)
 float2 = 2.2
@@ -84,8 +86,8 @@ print (float2)
 float3 = 3.3
 print (float3)
 
-#float can also be referred to via the scientific notation using "e".
-#this evaluates to 150.0
+# float can also be referred to via the scientific notation using "e".
+# this evaluates to 150.0
 float4 = 1.5e2
 print (float4)
 
@@ -99,7 +101,8 @@ total_cost = cucumbers * price_per_cucumber
 print("total cost", total_cost)
 
 # FLOAT CONTINUED...
-#To yield a float as the result instead, programmers often change either the numerator or the denominator (or both) to be a float:
+# To yield a float as the result instead, programmers often change either the numerator or 
+# the denominator (or both) to be a float:
 quotient1 = 7./2
 # the value of quotient1 is 3.5
 print(quotient1)
@@ -154,7 +157,7 @@ float_2 = 40.0
 product = float_1 * float_2
 print (product)
 
-#printing out the product as a string with the float converted to an integer.
+# printing out the product as a string with the float converted to an integer.
 big_string = "The product was " + str(int(product))
 print (big_string)
 
@@ -163,11 +166,11 @@ number2 = "10"
 
 string_addition = number1 + number2
 print (string_addition)
-#string_addition now has a value of "10010"
+# string_addition now has a value of "10010"
 
 int_addition = int(number1) + int(number2)
 print (int_addition)
-#int_addition has a value of 110
+# int_addition has a value of 110
 
 string_num = "7.5"
 print (string_num)
@@ -180,10 +183,10 @@ def cube(number):
 
 cube(9)
 print (cube(9))
-#gives result of the cube function of 9 * 9 * 9 = 729
+# gives result of the cube function of 9 * 9 * 9 = 729
 cube(3)
 print (cube(3))
-#gives result of the cube function of 3 * 3 * 3 = 27
+# gives result of the cube function of 3 * 3 * 3 = 27
 
 
 def by_three(number):
@@ -192,13 +195,98 @@ def by_three(number):
   else:
     return False
 
-#Don’t forget that if and else statements need a : at the end of #that line!
+# Don’t forget that if and else statements need a : at the end of #that line!
 
 
-#testing the function to return a True value as it should due to #the logic that 90 is divisible by 3 thus then the function calls #the cube function to run the cube of 90 = 729,000
+# testing the function to return a True value as it should due to #the logic that 
+# 90 is divisible by 3 thus then the function calls #the cube function to run the cube of 90 = 729,000
 by_three(90)
 print (by_three(90))
 
-#testing the function to return a False value, as it should and #does.
+# testing the function to return a False value, as it should and #does.
 by_three(10)
 print (by_three(10))
+
+# GENERIC IMPORTS
+# import math is importing a library of variables and functions already made in python
+# to bring all those functions and variables to import a module such as math. It is called a generic import.
+
+import math
+
+print (math.sqrt(25))
+
+print (math.sqrt(100))
+
+print (math.sqrt(250))
+
+# FUNCTION IMPORT
+# to import only a certain function from and module is a function import and that is done with a keyword "from".
+
+#from module import function
+
+# looks like this for the same sqrt function from the math module.
+from math import sqrt
+
+# UNIVERSAL IMPORTS
+# from module import * = from the module / library of funcitions import ALL.
+# This way you don't have to continue to type out math. or whatever module you are working with.
+
+# from math import * #UNCOMMENT THIS IF YOU WANT ALL OF THE FUNCTIONS FROM THE MODULE MATH
+
+# Universal imports may look great on the surface, but they’re not a good idea for one very important reason: 
+# they fill your program with a ton of variable and function names without the safety of those names 
+# still being associated with the module(s) they came from.
+
+# If you have a function of your very own named sqrt and you import math, 
+# your function is safe: there is your sqrt and there is math.sqrt. 
+# If you do from math import *, however, you have a problem: namely, 
+# two different functions with the exact same name.
+
+# Even if your own definitions don’t directly conflict with names from imported modules, 
+# if you import * from several modules at once, you won’t be able to figure out which variable or 
+# function came from where.
+
+# For these reasons, it’s best to stick with either import module and type module.name or
+# just import specific variables and functions from various modules as needed.
+
+# To print every function from a module in this case specifically math: 
+# TYPE import math # Imports the math module
+# everything = dir(math)  # Sets everything to a list of things from math
+# print everything  # Prints 'em all!
+
+# RESULTS:
+
+#['__doc__', '__name__', '__package__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2',
+# 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1',
+# 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'hypot', 'isinf', 'isnan', 
+# 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 
+# 'sqrt', 'tan', 'tanh', 'trunc']
+
+# USING FUNCTIONS ALREADY WITHIN PYTHON 
+
+
+def biggest_number(*args):
+  print (max(args))
+  return (max(args))
+#Return the largest item in an iterable or the largest of two or more arguments.
+
+#If one positional argument is provided, iterable must be a non-empty iterable (such as a non-empty string, tuple or list). The largest item in the iterable is returned. If two or more positional arguments are provided, the largest of the positional arguments is returned.
+
+
+def smallest_number(*args):
+  print (min(args))
+  return (min(args))
+#Return the smallest item in an iterable or the smallest of two or more arguments.
+
+#If one positional argument is provided, iterable must be a non-empty iterable (such as a non-empty string, tuple or list). The smallest item in the iterable is returned. If two or more positional arguments are provided, the smallest of the positional arguments is returned.
+
+
+def distance_from_zero(arg):
+  print (abs(arg))
+  return (abs(arg))
+#Return the absolute value of a number. The argument may be a plain or long integer or a floating point number. If the argument is a complex number, its magnitude is returned.
+
+
+biggest_number(-10, -5, 5, 10)
+smallest_number(-10, -5, 5, 10)
+distance_from_zero(-10)

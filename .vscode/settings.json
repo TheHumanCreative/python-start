@@ -1,6 +1,21 @@
 {
     "cSpell.words": [
         "Potatosburg",
-        "lacek"
+        "acosh",
+        "asinh",
+        "atanh",
+        "erfc",
+        "expm",
+        "fabs",
+        "fmod",
+        "frexp",
+        "fsum",
+        "hypot",
+        "isinf",
+        "isnan",
+        "lacek",
+        "ldexp",
+        "lgamma",
+        "modf"
     ]
 }
