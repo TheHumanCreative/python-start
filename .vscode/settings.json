@@ -17,5 +17,8 @@
         "ldexp",
         "lgamma",
         "modf"
+    ],
+    "cSpell.ignoreWords": [
+        "olute"
     ]
 }

@@ -1,5 +1,7 @@
 #comments in python are started with a #.
 #testing out the print statements.
+# Note the () around many of the PRINT statements are only there to ensure they work in this code editor.
+# Else the () would not be needed especially where you see them doubled up.
 
 # PRINT STATEMENTS
 
@@ -264,29 +266,125 @@ from math import sqrt
 
 # USING FUNCTIONS ALREADY WITHIN PYTHON 
 
-
 def biggest_number(*args):
   print (max(args))
   return (max(args))
-#Return the largest item in an iterable or the largest of two or more arguments.
+# Return the largest item in an iterable or the largest of two or more arguments.
 
-#If one positional argument is provided, iterable must be a non-empty iterable (such as a non-empty string, tuple or list). The largest item in the iterable is returned. If two or more positional arguments are provided, the largest of the positional arguments is returned.
+# If one positional argument is provided, iterable must be a non-empty iterable 
+# (such as a non-empty string, tuple or list). The largest item in the iterable is returned. 
+# If two or more positional arguments are provided, the largest of the positional arguments is returned.
 
+maximum = max(1, 2, 3, 4)
+# associating maximum to an array of numbers and then running the
+# max() function on the array so when maximum is printed it returns
+# the highest number / integer / float from the array.
+print (maximum)
+# expecting 4 and got 4.
 
 def smallest_number(*args):
   print (min(args))
   return (min(args))
-#Return the smallest item in an iterable or the smallest of two or more arguments.
+# Return the smallest item in an iterable or the smallest of two or more arguments.
 
-#If one positional argument is provided, iterable must be a non-empty iterable (such as a non-empty string, tuple or list). The smallest item in the iterable is returned. If two or more positional arguments are provided, the smallest of the positional arguments is returned.
+# If one positional argument is provided, iterable must be a non-empty iterable 
+# (such as a non-empty string, tuple or list). The smallest item in the iterable is returned. 
+# If two or more positional arguments are provided, the smallest of the positional arguments is returned.
 
+minimum = min(1, 2, 3, 4)
+# associating minimum to an array of numbers and then running the
+# min() function on the array so when minimum is printed it returns
+# the lowest number / integer / float from the array.
+
+print (minimum)
+# expecting 1 and got 1.
 
 def distance_from_zero(arg):
   print (abs(arg))
   return (abs(arg))
-#Return the absolute value of a number. The argument may be a plain or long integer or a floating point number. If the argument is a complex number, its magnitude is returned.
+# Return the absolute value of a number. The argument may be a plain or long integer or a floating point number.
+# If the argument is a complex number, its magnitude is returned.
 
+absolute = abs(-42)
+# The abs() function returns the absolute value of the number it # # takes as an argument—that is, that number’s distance from 0 on an # imagined number line.
+print (absolute)
+# expected 42 got 42.
 
 biggest_number(-10, -5, 5, 10)
 smallest_number(-10, -5, 5, 10)
 distance_from_zero(-10)
+
+# Print out the types of an integer, a float,
+# and a string on separate lines below.
+
+# type() function returns the type of the data it receives as an # # argument.
+
+print (type(42))
+print (type(4.2))
+print (type('spam'))
+
+# FUNCTION PRACTICE with if and elif and else:
+
+# First, def a function, shut_down, that takes one arguments.
+# Don’t forget the parentheses or the colon!
+
+# Then, if the shut_down function receives an s equal to "yes", it # should return "Shutting down"
+
+# Alternatively, elif s is equal to "no", then the function should # return "Shutdown aborted".
+
+# Finally, if shut_down gets anything other than those inputs, the
+# function should return "Sorry"
+
+# FUNCTION
+
+def shut_down(s):
+  if s == "yes":
+    return "Shutting down"
+  elif s == "no":
+    return "Shutdown aborted"
+  else:
+    return "Sorry"
+
+# TESTING FUNCTION
+
+shut_down("yes")
+print (shut_down("yes"))
+
+shut_down("no")
+print (shut_down("no"))
+
+shut_down("maybe")
+print (shut_down("maybe"))
+
+# FUNCTION TWO 
+
+# First, def a function called distance_from_zero, with one
+# argument (choose any argument name you like).
+
+# If the type of the argument is either int or float, the function # should return the abs()olute 
+# value of the function input.
+
+# Otherwise, the function should return "Nope".
+
+
+def distance_away_from_zero(num):
+  if type(num) == int or type(num) == float:
+    return abs(num)
+  else:
+    return "Nope"
+
+# TEST CASES FOR FUNCTION
+
+
+distance_away_from_zero(3.0)
+print (distance_away_from_zero(3.0))
+# expected 3.0 received 3.0 as num is an float.
+
+distance_away_from_zero(3)
+print (distance_away_from_zero(3))
+# expected 3 received 3 as num is an int.
+
+distance_away_from_zero('Three')
+print (distance_away_from_zero('Three'))
+# expected 'Nope' received 'Nope' as string in NOT defined
+# within the function for a result, so the else was executed.
